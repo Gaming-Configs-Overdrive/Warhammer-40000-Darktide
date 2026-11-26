@@ -8,6 +8,13 @@ This file is based on the Semver-Model ('Added', 'Changed', 'Removed')
 
 ## [Unreleased]
 
+### Added
+
+- Record the 19 enabled Darktide mods from the local Steam load-order file with
+  original source links and dependencies.
+- Document the saved setup, disabled entries and manual setup in English and
+  German.
+
 ## [2.0.0] - 2026-11-12
 
 ### Changed

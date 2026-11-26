@@ -1,7 +1,186 @@
 # Game manifest, see docs/GAME_MANIFEST.md and schema/game.schema.json.
 # yaml-language-server: $schema=./schema/game.schema.json
+---
 schema: 1
-id: example-game
-name: Example Game
-online: false
+id: warhammer-40000-darktide
+name: 'Warhammer 40,000: Darktide'
+online: true
+stores:
+  steam:
+    appid: 1361210
+detect:
+  exe: binaries/Darktide.exe
+processes:
+  - darktide
 files: []
+mods:
+  layout:
+    - mods
+  # Item order follows the uncommented lines in mods/mod_load_order.txt.
+  items:
+    - id: animation-events
+      name: Animation Events
+      source:
+        type: url
+        url: https://www.nexusmods.com/warhammer40kdarktide/mods/21
+      license: See the original Nexus Mods page for terms.
+      distribute: link
+      notes: Folder animation_events. Dependency for Scoreboard.
+    - id: what-the-localization
+      name: What The Localization
+      source:
+        type: url
+        url: https://www.nexusmods.com/warhammer40kdarktide/mods/163
+      license: See the original Nexus Mods page for terms.
+      distribute: link
+      notes: Folder WhatTheLocalization.
+    - id: masteritems-community-patch
+      name: MasterItems Community Patch
+      source:
+        type: url
+        url: https://www.nexusmods.com/warhammer40kdarktide/mods/409
+      license: See the original Nexus Mods page for terms.
+      distribute: link
+      notes: >-
+        Folder master_item_community_patch.
+        The author recommends putting this patch at the top of the load order.
+    - id: scoreboard
+      name: Scoreboard
+      source:
+        type: url
+        url: https://www.nexusmods.com/warhammer40kdarktide/mods/22
+      license: See the original Nexus Mods page for terms.
+      distribute: link
+      requires: [animation-events]
+      notes: Folder scoreboard. Keep results for personal review.
+    - id: better-melk
+      name: Character Screen Contracts (aka Better Melk)
+      source:
+        type: url
+        url: https://www.nexusmods.com/warhammer40kdarktide/mods/71
+      license: See the original Nexus Mods page for terms.
+      distribute: link
+      notes: Folder BetterMelk.
+    - id: hud-buff-stacks
+      name: HUD Buff Stacks
+      source:
+        type: url
+        url: https://www.nexusmods.com/warhammer40kdarktide/mods/470
+      license: See the original Nexus Mods page for terms.
+      distribute: link
+      notes: Folder BuffStackHUD.
+    - id: chat-block
+      name: Chat Block
+      source:
+        type: url
+        url: https://www.nexusmods.com/warhammer40kdarktide/mods/68
+      license: See the original Nexus Mods page for terms.
+      distribute: link
+      notes: >-
+        Folder ChatBlock. Automates blocking.
+        Leave disabled in the initial UI-only setup.
+    - id: collectible-finder
+      name: Collectible Finder
+      source:
+        type: url
+        url: https://www.nexusmods.com/warhammer40kdarktide/mods/298
+      license: See the original Nexus Mods page for terms.
+      distribute: link
+      notes: >-
+        Folder CollectibleFinder. Alerts to nearby objectives.
+        Leave disabled in the initial UI-only setup.
+    - id: display-ping
+      name: Display Ping (Latency)
+      source:
+        type: url
+        url: https://www.nexusmods.com/warhammer40kdarktide/mods/460
+      license: See the original Nexus Mods page for terms.
+      distribute: link
+      notes: Folder DisplayPing.
+    - id: enhanced-descriptions
+      name: Enhanced Descriptions
+      source:
+        type: url
+        url: https://www.nexusmods.com/warhammer40kdarktide/mods/210
+      license: See the original Nexus Mods page for terms.
+      distribute: link
+      notes: Folder Enhanced_descriptions.
+    - id: merged-talent-stats
+      name: Merged Talent Stats
+      source:
+        type: url
+        url: https://www.nexusmods.com/warhammer40kdarktide/mods/263
+      license: See the original Nexus Mods page for terms.
+      distribute: link
+      notes: Folder MergedTalentStats.
+    - id: ovenproof-scoreboard-plugin
+      name: "Ovenproof's Scoreboard Plugin"
+      source:
+        type: url
+        url: https://www.nexusmods.com/warhammer40kdarktide/mods/241
+      license: See the original Nexus Mods page for terms.
+      distribute: link
+      requires: [scoreboard]
+      notes: Folder ovenproof_scoreboard_plugin. Verify patch compatibility.
+    - id: ration-pack
+      name: Ration Pack
+      version: '6.3.1'
+      source:
+        type: url
+        url: https://www.nexusmods.com/warhammer40kdarktide/mods/93
+      license: See the original Nexus Mods page for terms.
+      distribute: link
+      notes: Folder Ration Pack.
+    - id: reveal-blessings
+      name: Reveal Blessings
+      source:
+        type: url
+        url: https://www.nexusmods.com/warhammer40kdarktide/mods/138
+      license: See the original Nexus Mods page for terms.
+      distribute: link
+      notes: Folder reveal_blessings. Targets the Re-Bless screen.
+    - id: show-remaining-dodges
+      name: Show Remaining Dodges
+      source:
+        type: url
+        url: https://www.nexusmods.com/warhammer40kdarktide/mods/280
+      license: See the original Nexus Mods page for terms.
+      distribute: link
+      notes: Folder show_remaining_dodges.
+    - id: stimmfo
+      name: Stimmfo - Stimm Bonus Indicator
+      source:
+        type: url
+        url: https://www.nexusmods.com/warhammer40kdarktide/mods/292
+      license: See the original Nexus Mods page for terms.
+      distribute: link
+      notes: Folder Stimmfo.
+    - id: true-level
+      name: True Level
+      source:
+        type: url
+        url: https://www.nexusmods.com/warhammer40kdarktide/mods/156
+      license: See the original Nexus Mods page for terms.
+      distribute: link
+      notes: Folder true_level. Keep player-level data out of public chat.
+    - id: extended-weapon-customization
+      name: Extended Weapon Customization
+      version: '2.10'
+      source:
+        type: url
+        url: https://www.nexusmods.com/warhammer40kdarktide/mods/277
+      license: See the original Nexus Mods page for terms.
+      distribute: link
+      requires: [masteritems-community-patch]
+      notes: >-
+        Folder weapon_customization. Can change aiming equipment.
+        Leave disabled in the initial UI-only setup.
+        Version 3.0+ has an additional dependency.
+    - id: numeric-ui
+      name: Numeric UI
+      source:
+        type: url
+        url: https://www.nexusmods.com/warhammer40kdarktide/mods/14
+      license: See the original Nexus Mods page for terms.
+      distribute: link
+      notes: Folder NumericUI.
