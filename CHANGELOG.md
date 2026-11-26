@@ -10,6 +10,8 @@ This file is based on the Semver-Model ('Added', 'Changed', 'Removed')
 
 ### Added
 
+- Document installation of prepared original mod files through Overdrive.
+
 - Record the 19 enabled Darktide mods from the local Steam load-order file with
   original source links and dependencies.
 - Document the saved setup, disabled entries and manual setup in English and

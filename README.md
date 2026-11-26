@@ -11,6 +11,17 @@ The [game manifest](game.yml) records the 19 enabled entries from the local Stea
 3. Start with display and description changes such as Display Ping, Enhanced Descriptions and Merged Talent Stats. Use the source pages in [`game.yml`](game.yml) or the generated `dist/MODS.md`. Extract each selected mod into `mods/` and add its exact folder name to `mods/mod_load_order.txt` in the order required by the authors.
 4. Check for errors in [Darktide's console log](https://support.fatshark.se/hc/en-us/articles/360017633918--PC-How-to-Provide-a-Crash-Report-Console-Log-Launcher-Log-or-user-settings-config) after launch. Leave Chat Block, Collectible Finder and Extended Weapon Customization disabled for the initial setup. Keep Scoreboard results and True Level data for personal use.
 
+## Install prepared mod files
+
+To install the mod files through Overdrive, prepare `payloads/<mod-id>/mods/<original-folder>/` for each of the 19 linked entries. Use the manifest ID and the original folder name shown in the mod notes. For example, Animation Events goes under `payloads/animation-events/mods/animation_events/`. Copy an existing installation's mod folders or obtain the files from the linked authors.
+
+```powershell
+.\gco-install.exe install --mod-payloads .\payloads --dry-run
+.\gco-install.exe install --mod-payloads .\payloads
+```
+
+Use the Darktide Mod Loader and Framework setup above. The installer copies the staged files and backs up replacements. Use the loader's own file to choose which mods to enable.
+
 ## Saved load order
 
 The manifest preserves the saved order for reference. The MasterItems Community Patch author recommends loading it at the top. Scoreboard requires Animation Events, and Ovenproof's plugin requires Scoreboard. The local Extended Weapon Customization is version `2.10`. The author also requires Visual Loadout Customization Community Patch for version `3.0` and later.

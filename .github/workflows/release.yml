@@ -15,4 +15,5 @@ jobs:
       attestations: write
     uses: Gaming-Configs-Overdrive/.github/.github/workflows/game-release.yml@v1
     with:
-      installer-ref: v1
+      # Supports --mod-payloads.
+      installer-ref: 8a6f3860323fd2ca1b528b2fe20f48a437a97ecc
