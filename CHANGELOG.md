@@ -8,14 +8,12 @@ This file is based on the Semver-Model ('Added', 'Changed', 'Removed')
 
 ## [Unreleased]
 
+## [2.1.0] - 2026-11-26
+
 ### Added
 
-- Document installation of prepared original mod files through Overdrive.
-
-- Record the 19 enabled Darktide mods from the local Steam load-order file with
-  original source links and dependencies.
-- Document the saved setup, disabled entries and manual setup in English and
-  German.
+- Record 19 Darktide mods with their original sources, dependencies and saved load order.
+- Install and restore prepared files from the original mod authors through `gco-install`. Darktide Mod Loader and Darktide Mod Framework handle activation.
 
 ## [2.0.0] - 2026-11-12
 
